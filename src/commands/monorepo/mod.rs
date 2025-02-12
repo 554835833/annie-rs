@@ -17,6 +17,7 @@ pub enum MonorepoCommands {
 }
 
 pub fn run(args: MonorepoCommands) {
+  log::info!("run monorepo command:");
   match args {
     MonorepoCommands::Package(args) => {
       if let Some(command) = args.command {
